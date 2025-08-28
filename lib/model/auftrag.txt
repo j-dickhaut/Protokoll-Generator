@@ -1,0 +1,97 @@
+class Auftrag
+  -id (int)
+  -externe id (int)
+  -Fahrer (String)
+  
+  -Fahrzeugdaten
+    -Fahrgestellnummer (String)
+    -Nummernschild(String)
+    -Fahrzeugtyp (String)
+
+  -Annahme
+    -Name (String)
+    -Unterschrift (?)
+    -Adresse 
+      -Postleitzahl (String)
+      -Straße (String)
+    -Wartezeit (bool)
+    -Kilometerstand (int)
+    -Tankanzeige (float)
+
+  -Abgabe
+    -Name (String)
+    -Unterschrift (?)
+    -Adresse
+      -Postleitzahl (String)
+      -Straße (String)
+    -Wartezeit (bool)
+    -Kilometerstand (int)
+    -Tankanzeige (float)
+
+  -Protokoll
+    -Ausstattung
+      -KFZ-Schein (bool)
+      -Betriebsanleitung (bool)
+      -Serviceheft (bool)
+      -COC Papiere (bool)
+      -Laderaumabdeckung (bool)
+      -Sicherheitsnetz (bool)
+      -Warndreieck (bool)
+      -Warnweste (bool)
+      -Verbandskasten (bool)
+      -Navigation (bool)
+      -Navi CD (bool)
+      -Radio (bool)
+      -Antenne (bool)
+      -Bordwerkzeug (bool)
+      -Anhängerkupplung (bool)
+      -Ladekabel (int)
+      -Schlüssel (int)
+      -Schlüssel funk (int)
+      -Tank-/Ladekarten (List?<String>)
+
+    -Reifen
+      -am Fahrzeug (bool)
+      -im Fahrzeug (bool)
+      -Reifenprofil (List<int>)
+      -Ersatzrad (bool)
+      -Tire-set (bool)
+
+    -Innenzustand
+      -Fahrzeug innen gereinigt (bool)
+      -Fahrzeug innen sauber (bool)
+      -Rauchfrei (bool)
+      -Vordersitze (String)
+      -Rücksitze (String)
+      -Türverkleidung (String)
+      -Dachverkleidung(String)
+      -Kofferraum (String)
+      -Teppichboden (String)
+      -Amaturenbrett(String)
+      -Fußmatten (int)
+
+  -Außenzustand
+    -gereinigt (bool)
+    -sauber (bool)
+    -erschwerte zustandsprüfung (String?)
+  
+  -leistungen
+    -wäsche (bool)
+    -rote Kennzeichen (bool)
+    -Zulassung (bool)
+    -Reifentransport(bool)
+    -Einweisung (bool)
+    -Volltanken (bool)
+    -Ladenstopps (int) 
+    -Ladedauer (int)
+    -Sonstiges(String)
+
+  -Anmerkungen
+    -Annahme (String)
+    -Fahrt (String)
+    -Abgabe (String)
+
+  -Schaden 
+    -Art (String)
+    -Ort (String)
+    -Koordinate (List<int>)
