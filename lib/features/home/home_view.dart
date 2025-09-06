@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:protokoll_generator/screens/create_case/new_case.dart';
-import 'package:protokoll_generator/screens/home/widgets/order_card.dart';
+import 'package:protokoll_generator/features/home/widgets/order_card.dart';
 import 'package:protokoll_generator/shared/theme/styled_text.dart';
 import 'package:protokoll_generator/shared/theme/theme.dart';
 
@@ -48,9 +47,7 @@ class HomeView extends StatelessWidget {
           SizedBox(height: 8),
           FilledButton.icon(
             onPressed: () {
-              Navigator.of(
-                context,
-              ).push(MaterialPageRoute(builder: (ctx) => NewCaseScreen()));
+              Navigator.of(context).pushNamed('/new_case');
             },
             label: StyledButtonText('new case'),
             icon: Icon(Icons.add),

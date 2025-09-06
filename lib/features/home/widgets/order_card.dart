@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:protokoll_generator/screens/home/widgets/widgets/location_time.dart';
+import 'package:protokoll_generator/features/home/widgets/location_time.dart';
 import 'package:protokoll_generator/shared/theme/styled_text.dart';
 import 'package:protokoll_generator/shared/theme/theme.dart';
 

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:protokoll_generator/screens/create_case/widgets/location_card.dart';
+import 'package:protokoll_generator/features/new_case/widgets/location_card.dart';
 import 'package:protokoll_generator/shared/theme/styled_text.dart';
 import 'package:protokoll_generator/shared/theme/theme.dart';
 
-class NewCaseScreen extends StatelessWidget {
-  const NewCaseScreen({super.key});
+class NewCaseView extends StatelessWidget {
+  const NewCaseView({super.key});
 
   @override
   Widget build(BuildContext context) {
