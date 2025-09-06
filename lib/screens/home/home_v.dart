@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:protokoll_generator/screens/create_case/new_case.dart';
 import 'package:protokoll_generator/screens/home/widgets/order_card.dart';
 import 'package:protokoll_generator/shared/theme/styled_text.dart';
 import 'package:protokoll_generator/shared/theme/theme.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeView extends StatelessWidget {
   final List<String> dummyList = [
     'Müchen > Gießen',
     'Rehden > Ulm',
     'Saarbrücken > Linz am Rhein',
     'Dortmund > Fernwald',
   ];
-  HomeScreen({super.key});
+  HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +36,7 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          SizedBox(height: 10),
           Expanded(
             child: SizedBox(
               child: ListView.builder(
@@ -43,12 +45,17 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 16),
-          FilledButton(
-            onPressed: () {},
-            child: StyledButtonText('create new order'),
+          SizedBox(height: 8),
+          FilledButton.icon(
+            onPressed: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (ctx) => NewCaseScreen()));
+            },
+            label: StyledButtonText('new case'),
+            icon: Icon(Icons.add),
           ),
-          SizedBox(height: 50),
+          SizedBox(height: 30),
         ],
       ),
     );
